@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Marco Prado",
+      "authorEmail": "marco.prado.public@gmail.com",
+      "authorUrl": "mprado.me"
+    }
+  }
+}
