@@ -6,7 +6,7 @@ class HelloWorldStaticDataProvider extends HelloWorldRepository {
   @override
   HelloWorldModel get() {
     return HelloWorldModel(
-      text: 'helloWorldWithExclamation'.tr()
+      text: 'helloWorld'.tr()
     );
   }
 }

@@ -20,18 +20,12 @@ class HelloWorldScreen extends StatefulWidget {
 }
 
 class _HelloWorldScreen extends State<HelloWorldScreen> {
-  SampleIncrementCounterRepository _sampleIncrementCounterRepository;
-  List<SampleIncrementCounterBloc> _sampleIncrementCounterBlocs;
 
   _HelloWorldScreen() {
-    _sampleIncrementCounterRepository =
-        SampleIncrementCounterStaticDataProvider();
     int nCounters = _sampleIncrementCounterRepository.nCounters();
     _sampleIncrementCounterBlocs = List.from(
         List<int>.generate(nCounters, (index) => index).map((index) {
-          return SampleIncrementCounterBloc(
-            sampleIncrementCounterRepository: _sampleIncrementCounterRepository
-          );
+          ;
         })
     );
   }
@@ -48,7 +42,7 @@ class _HelloWorldScreen extends State<HelloWorldScreen> {
                 create: (context) => HelloWorldStaticDataProvider(),
               ),
               RepositoryProvider<SampleIncrementCounterRepository>(
-                create: (context) => _sampleIncrementCounterRepository,
+                create: (context) => SampleIncrementCounterStaticDataProvider(),
               ),
               RepositoryProvider<SampleBitClickRepository>(
                 create: (context) => SampleBitClickDataProvider(),
@@ -70,7 +64,9 @@ class _HelloWorldScreen extends State<HelloWorldScreen> {
                               Center(
                                 child: Text(state.helloWorldModel.text),
                               ),
-                              ...buildCounters(context),
+                              SampleIncrementCounterComponent(
+
+                              ),
                               SampleBitClickComponent(
                                 name: 'bit_click_0'
                               )
@@ -96,8 +92,7 @@ class _HelloWorldScreen extends State<HelloWorldScreen> {
       Key key = Key('counter_${index.toString()}');
 
       return SampleIncrementCounterComponent(
-          key: key,
-          sampleIncrementCounterBloc: _sampleIncrementCounterBlocs[index]
+          key: key
       );
     });
   }

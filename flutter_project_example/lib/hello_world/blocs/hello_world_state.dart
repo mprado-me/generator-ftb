@@ -1,15 +1,11 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_project_example/hello_world/models/HelloWorldModel.dart';
 
-abstract class HelloWorldState extends Equatable {
-  const HelloWorldState();
-}
-
-class HelloWorldInitialState extends HelloWorldState {
+class HelloWorldState extends Equatable {
   final HelloWorldModel helloWorldModel;
 
-  HelloWorldInitialState(this.helloWorldModel) : super();
+  HelloWorldState(this.helloWorldModel) : super();
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [helloWorldModel];
 }

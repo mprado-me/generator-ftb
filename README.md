@@ -1,8 +1,15 @@
-# FTB Generator - A generator for Flutter BLoC Architecture [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# FTB Generator - A boilerplate code generator for Flutter BLoC Architecture [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
-A simple, but powerful code generator for flutter projects using [bloc pattern](https://bloclibrary.dev/#/). There are some libs out there for organization purposes like [modular](https://github.com/Flutterando/modular), but on my case I didn't want make use of a lib that impose restrictions on the code level, because as the project grows, some restrictions have the potential to become a problem. The 
-main objective of this project it's just speed up flutter development generating boilerplate code with a specific code organization structure. The code organization structure used on 
-this generator was based on previous work of flutter community, but I encourage you to fork this project and make changes on the template folders to addapt to your specific needs or send pull requests
+THIS PROJECT HAS BEEN DISCOUNTINUATED. I RECOMMEND YOU USE [SLIDY](https://github.com/Flutterando/slidy).
+
+A simple, but powerful boilerplate code generator for flutter projects using [bloc pattern](https://bloclibrary.dev/#/). 
+There are some libs out there for organization purposes like [modular](https://github.com/Flutterando/modular), 
+but on my case I didn't want make use of a lib that impose restrictions on the code level, because as the project 
+grows, some restrictions have the potential to become a problem. The main objective of this project it's just 
+speed up flutter development generating boilerplate code with a specific code organization structure. 
+The code organization structure used on 
+this generator was based on previous work of flutter community, but I encourage you to fork this project and 
+make changes on the template folders to addapt to your specific needs or send pull requests
 if your changes could improve the code organization for the majority of flutter developers.
 
 ## Inspiration
@@ -38,7 +45,8 @@ flutter:
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-ftb using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-ftb using [npm](https://www.npmjs.com/) 
+(we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
@@ -50,32 +58,6 @@ npm install -g generator-ftb
 On [./flutter_project_example](./flutter_project_example) you can find a flutter project example using the directory structure used on this generator. The project directory structure is combination of a component approach, a layered approach and tree like approach.
 
 ![Fluuter File Organization Approaches](./assets/flutter_possible_file_structures.png)
-
-...
-
-## Generating a New Project
-
-```bash
-yo ftb
-```
-
-...
-
-## Generating a New Screen
-
-```bash
-yo ftb:screen
-```
-
-...
-
-## Generating a New Component/Widget
-
-```bash
-yo ftb:screen
-```
-
-...
 
 ## Getting To Know Yeoman
 
@@ -97,4 +79,3 @@ MIT
 [daviddm-url]: https://david-dm.org/marcoprado17/generator-ftb
 [coveralls-image]: https://coveralls.io/repos/marcoprado17/generator-ftb/badge.svg
 [coveralls-url]: https://coveralls.io/r/marcoprado17/generator-ftb
- 

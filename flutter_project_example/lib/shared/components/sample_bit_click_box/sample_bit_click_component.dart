@@ -8,12 +8,12 @@ import 'package:flutter_project_example/shared/components/sample_bit_click_box/s
 import 'package:flutter_project_example/shared/repositories/sample_bit_click_repository.dart';
 
 class SampleBitClickComponent extends StatelessWidget {
-  static const Color color = Color.fromARGB(200, 135,206,250);
+  static const Color backgroundColor = Color.fromARGB(200, 135,206,250);
   final String name;
 
-  const SampleBitClickComponent({
+  SampleBitClickComponent({
     @required this.name,
-  }) : super();
+  }) : super() {}
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class SampleBitClickComponent extends StatelessWidget {
                   .add(Toggle());
             },
             child: Container(
-              color: color,
+              color: backgroundColor,
               child: Column(
                 children: <Widget>[
                   Container(

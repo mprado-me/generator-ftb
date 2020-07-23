@@ -4,15 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_example/shared/components/sample_increment_counter/sample_increment_counter_bloc.dart';
 
 class SampleIncrementCounterComponent extends StatelessWidget {
-  static const Color color = Color.fromARGB(200, 255, 192, 203);
-  final SampleIncrementCounterBloc sampleIncrementCounterBloc;
+  static const Color backgrounColor = Color.fromARGB(200, 255, 192, 203);
+  final String name;
+  final sampleIncrementCounterRepository;
 
-  const SampleIncrementCounterComponent(
-      {
-        @required Key key,
-        @required SampleIncrementCounterBloc this.sampleIncrementCounterBloc
-      })
-      : super(key: key);
+  SampleIncrementCounterComponent({
+    @required this.name,
+    @required this.sampleIncrementCounterRepository
+  }) : super(key: Key(name));
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,9 @@ class SampleIncrementCounterComponent extends StatelessWidget {
         key.toString().substring(3, key.toString().length - 3);
 
     return BlocProvider<SampleIncrementCounterBloc>(
-      create: (context) => this.sampleIncrementCounterBloc,
+      create: (context) => SampleIncrementCounterBloc(sampleIncrementCounterRepository: null
+
+      ),
       child:
           BlocBuilder<SampleIncrementCounterBloc, SampleIncrementCounterState>(
         builder: (BuildContext context, state) {
@@ -30,7 +31,7 @@ class SampleIncrementCounterComponent extends StatelessWidget {
                   .add(Increment());
             },
             child: Container(
-              color: color,
+              color: backgrounColor,
               child: Column(
                 children: <Widget>[
                   Container(
