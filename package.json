@@ -1,7 +1,7 @@
 {
   "name": "generator-ftb",
   "version": "1.0.0",
-  "description": "A simple, but powerful generator for flutter projects using bloc pattern",
+  "description": "A simple, but powerful code generator for flutter projects using bloc pattern",
   "homepage": "https://github.com/marcoprado17/generator-ftb",
   "author": {
     "name": "Marco Prado",

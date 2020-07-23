@@ -1,6 +1,6 @@
 # generator-ftb - A generator for Flutter Bloc Architecture [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
-A simple, but powerful generator for flutter projects using bloc pattern.
+A simple, but powerful code generator for flutter projects using bloc pattern.
 
 ![Flutter Bloc Architecture](./assets/mts-architecture-dependencies-v5.png) 
 
