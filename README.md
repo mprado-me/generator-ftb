@@ -1,10 +1,40 @@
-# generator-ftb - A generator for Flutter Bloc Architecture [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# FTB Generator - A generator for Flutter BLoC Architecture [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
-A simple, but powerful code generator for flutter projects using bloc pattern.
+A simple, but powerful code generator for flutter projects using [bloc pattern](https://bloclibrary.dev/#/). There are some libs out there for organization purposes like [modular](https://github.com/Flutterando/modular), but on my case I didn't want make use of a lib that impose restrictions on the code level, because as the project grows, some restrictions have the potential to become a problem. The 
+main objective of this project it's just speed up flutter development generating boilerplate code with a specific code organization structure. The code organization structure used on 
+this generator was based on previous work of flutter community, but I encourage you to fork this project and make changes on the template folders to addapt to your specific needs or send pull requests
+if your changes could improve the code organization for the majority of flutter developers.
 
-![Flutter Bloc Architecture](./assets/mts-architecture-dependencies-v5.png) 
+## Inspiration
 
-High inspired on Sebastian Faust work: https://github.com/devonfw-forge/devonfw4flutter-mts-app
+* Sebastian Faust work: https://github.com/devonfw-forge/devonfw4flutter-mts-app
+* Conner Aldrich work: https://medium.com/flutter-community/flutter-code-organization-revised-b09ad5cef7f6
+* Modular team work: https://github.com/Flutterando/modular#modular-structure
+
+![Flutter BLoC Architecture](./assets/mts-architecture-dependencies-v5.png)
+
+## Flutter Libraries Used
+
+Dependencies on pubscpec.yaml:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  equatable: ^1.2.2
+  bloc: ^6.0.1
+  flutter_bloc: ^6.0.1
+  easy_localization: ^2.3.2
+  easy_localization_loader: ^0.0.2
+```
+
+It's also important put the translation files directory on your pubspec:
+
+```yaml
+flutter:
+  assets:
+    - assets/translations/
+```
 
 ## Installation
 
@@ -16,6 +46,10 @@ npm install -g generator-ftb
 ```
 
 ## Project Structure
+
+On [./flutter_project_example](./flutter_project_example) you can find a flutter project example using the directory structure used on this generator. The project directory structure is combination of a component approach, a layered approach and tree like approach.
+
+![Fluuter File Organization Approaches](./assets/flutter_possible_file_structures.png)
 
 ...
 
