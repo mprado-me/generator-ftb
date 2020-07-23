@@ -15,11 +15,33 @@ npm install -g yo
 npm install -g generator-ftb
 ```
 
-Then generate your new project:
+## Project Structure
+
+...
+
+## Generating a New Project
 
 ```bash
 yo ftb
 ```
+
+...
+
+## Generating a New Screen
+
+```bash
+yo ftb:screen
+```
+
+...
+
+## Generating a New Component/Widget
+
+```bash
+yo ftb:screen
+```
+
+...
 
 ## Getting To Know Yeoman
 
